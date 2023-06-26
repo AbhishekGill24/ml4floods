@@ -508,7 +508,7 @@ def _generate_gt_fromarray(
         clouds &= (brightness >= BRIGHTNESS_THRESHOLD)
 
         # binary opening of bright clouds
-        open_clouds = binary_opening(clouds, disk(3)).astype(np.bool)
+        open_clouds = binary_opening(clouds, disk(3)).astype(np.bool_)
 
         # Set to invalid bright clouds
         watergt[open_clouds] = 0
